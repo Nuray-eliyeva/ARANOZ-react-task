@@ -176,6 +176,7 @@ header {
 .subscribe {
     background-image: url("https://preview.colorlib.com/theme/aranoz/img/subscribe_area.png.webp");
     padding: 230px 0;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,13 +263,14 @@ footer p {
 
 /*---admin action---*/
 .admin-center {
-    width: 450px;
+    width: 550px;
+
 
 }
 
 .links {
     border: 2px solid #ff005a;
-    width: 100%;
+    width:100%;
     display: flex;
     justify-content: space-between;
     padding: 10px 5px;
@@ -327,7 +329,9 @@ td {
     background-color: #ff005a;
     border-radius: 5px;
 }
-
+.file-inp{
+    border: none;
+}
 @media (max-width: 1024px) {
     .nav-ul {
         display: none;

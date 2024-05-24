@@ -1,11 +1,11 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Navbar from './Navbar';
 import { CiHeart } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 import { GoChevronDown } from "react-icons/go";
 import { IoMdMenu } from "react-icons/io";
+import Navbar from './Navbar';
 const Admin= () => {
   const [data, setdata] = useState([])
   const [search, setsearch] = useState("")
@@ -62,6 +62,7 @@ const Admin= () => {
               <th>NAME</th>
               <th>COST</th>
               <th>DELETE</th>
+              <th>EDIT</th>
             </tr>
           </thead>
           <tbody>
@@ -74,6 +75,7 @@ const Admin= () => {
                     <td>{item.name}</td>
                     <td>{item.cost}</td>
                     <td><button className='btn' onClick={() => deleteData(item.id)}>Delete</button></td>
+                    <td><Link to={'/edit/'+item.id}><button className='btn'>Edit</button></Link></td>
                   </tr>
                 )
               })
