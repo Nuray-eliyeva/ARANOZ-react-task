@@ -1,9 +1,11 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { TiShoppingCart } from "react-icons/ti";
+import Navbar from './Navbar';
 import { CiHeart } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
+import { GoChevronDown } from "react-icons/go";
+import { IoMdMenu } from "react-icons/io";
 const Admin= () => {
   const [data, setdata] = useState([])
   const [search, setsearch] = useState("")
@@ -39,22 +41,8 @@ const Admin= () => {
   });
   return (
     <div>
-       <nav>
-       <div className="logo">
-              <img src="https://preview.colorlib.com/theme/aranoz/img/logo.png.webp" alt="" />
-            </div>
-            <ul className='nav-ul'>
-              <li>Home</li>
-              <li>Shop</li>
-              <li>Pages</li>
-              <li>Blog</li>
-              <li>Contact</li>
-            </ul>
-            <div className="nav-icons">
-              <CiSearch /><CiHeart /><TiShoppingCart />
-            </div>
-           
-       </nav>
+         <Navbar/>
+
        <div className="admin-center">
       <div className="links">
       <select onChange={(e)=>setSelectValue(e.target.value)}>
